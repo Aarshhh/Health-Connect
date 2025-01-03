@@ -1,0 +1,53 @@
+/* Background styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ff4d4d; /* Red background */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Center white box for user details */
+.dashboard-container {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+/* Welcome message */
+.dashboard-container h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* User details styling */
+.user-details p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Logout button styling */
+.logout-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #ff3333; /* Button red color */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+    transition: background-color 0.3s ease;
+}

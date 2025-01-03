@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthConnect</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <section class="left-section">
+            <img src="blood.png" alt="HealthConnect Image" class="banner-image">
+            <h1 class="main-heading">HealthConnect</h1>
+            <p>Welcome to HealthConnect, your health management partner. Connect with your health data, schedule appointments, and more.</p>
+        </section>
+
+        <section class="right-section">
+            <main>
+                <section class="login-container">
+                    <h2>Login</h2>
+                    <form action="login.php" method="post">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="remember-me" name="remember_me">
+                            <label for="remember-me">Remember Me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                        <button type="submit" class="btn-primary">Login</button>
+                    </form>
+                </section>
+            </main>
+        </section>
+    </div>
+</body>
+</html>

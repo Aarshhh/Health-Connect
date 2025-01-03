@@ -1,0 +1,228 @@
+/* General Styles for Registration Page */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7; /* Light gray background */
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Large and Bold Quote */
+.quote {
+  text-align: center;
+  color: #ef4444; /* Red color for quote */
+  font-weight: bold;
+  font-size: 36px; /* Increased font size */
+  margin-bottom: 40px; /* Add more space below the quote */
+}
+
+/* Sub-text style with increased weight */
+.sub-text {
+  text-align: left;
+  margin-bottom: 30px; /* Space between subtext and form */
+  color: #333;
+  font-size: 18px; /* Slightly larger font size */
+  font-weight: 600; /* Increased font weight */
+  padding: 0 40px; /* Align text with form */
+}
+
+/* Form Row for multi-column layout */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between columns */
+}
+
+.form-group-half {
+  flex: 1; /* Make both columns equal in width */
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 25px;
+  padding: 0 40px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.3); /* Red shadow on focus */
+  border-color: #ef4444; /* Red border color */
+  outline: none; /* Remove blue outline */
+}
+
+label {
+  font-size: 14px;
+  color: #4a4a4a; /* Dark gray color for labels */
+  margin-bottom: 5px;
+}
+
+.radio-group {
+  margin-bottom: 25px;
+  padding: 0 40px;
+}
+
+.radio-button {
+  margin-right: 10px;
+}
+
+/* Blood Group Section */
+#blood-group {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#blood-group:focus {
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.3); /* Red shadow on focus */
+  border-color: #ef4444; /* Red border color */
+  outline: none;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  resize: vertical;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.textarea:focus {
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.3); /* Red shadow on focus */
+  border-color: #ef4444; /* Red border color */
+  outline: none;
+}
+
+.select-country {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.select-country:focus {
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.3); /* Red shadow on focus */
+  border-color: #ef4444; /* Red border color */
+  outline: none;
+}
+
+.checkbox {
+  margin-bottom: 25px;
+  padding: 0 40px;
+}
+
+/* Button Styles - changed to match red theme */
+.submit-button {
+  background-color: #ef4444; /* Red background for button */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin: 0 40px;
+}
+
+.submit-button:hover {
+  background-color: #d73833; /* Darker red on hover */
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.5); /* Red shadow on focus */
+}
+
+/* Thank You message - initially hidden */
+#thank-you-message {
+  display: none; /* Hidden by default */
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ef4444;
+  margin-top: 20px;
+}
+
+/* Animation for Thank You message */
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.thank-you.show {
+  display: block;
+  animation: textAppear 1s ease-in-out; /* Advanced text animation */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      max-width: 90%;
+      margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      max-width: 95%;
+      margin: 10px auto;
+  }
+
+  .quote {
+      font-size: 28px; /* Adjusted for smaller screens */
+  }
+
+  .sub-text {
+      font-size: 16px; /* Adjusted font size for smaller screens */
+      padding: 0 20px; /* Adjust padding for smaller screens */
+  }
+
+  .form-row {
+      flex-direction: column; /* Stack the form fields vertically on small screens */
+  }
+
+  .form-group-half {
+      width: 100%; /* Make the form fields full width on small screens */
+  }
+
+  .submit-button {
+      padding: 10px 15px;
+      margin: 20px 0; /* Add margin for spacing on smaller screens */
+  }
+}

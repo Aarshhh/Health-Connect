@@ -1,0 +1,171 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4; /* Light background color for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+}
+
+.left-section {
+    flex: 1;
+    background-color: #ef4444;
+    color: #fff;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.banner-image {
+    width: 100%; /* Make sure the image takes the full width */
+    max-height: 200px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures the image is properly cropped and fitted */
+    margin-bottom: 1.5rem; /* Add space between the image and the heading */
+}
+
+.main-heading {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.left-section p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: #fff;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    animation: fadeIn 0.5s ease;
+    margin: 2rem;
+    text-align: left; /* Align content to the left */
+}
+.login-container h2 {
+    margin-bottom: 2rem; /* Increased space below Login heading */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #4a4a4a; /* Dark gray color for labels */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    outline: none; /* Remove default blue outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+}
+
+
+
+/* Forgot Password Styles */
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: #ef4444;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; /* Add space below the forgot password link */
+    transition: color 0.3s ease;
+
+}
+
+.forgot-password:hover {
+    color: #f4a4a4;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #ef4444;
+    color: #fff;
+    padding: 1.25rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    animation: pulse 1s infinite;
+}
+
+.btn-primary:focus {
+    outline: none; /* Remove default blue outline */
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5); /* Red shadow on focus */
+    border: 1px solid #ef4444; /* Red border */
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-primary:hover {
+    background-color: #f4a4a4;
+}

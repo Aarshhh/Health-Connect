@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <title>Registration</title>
+
+    <!-- Google reCAPTCHA API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <p class="quote">Donate Blood, Save Lives!</p>
+        <p class="sub-text">Fill the registration form</p>
+
+        <!-- Registration Form with Email, Password Confirmation, and reCAPTCHA -->
+        <form id="registration-form" action="register.php" method="post">
+            <!-- Personal Details -->
+            <div class="form-row">
+                <div class="form-group form-group-half">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first_name" class="form-control" required>
+                </div>
+                <div class="form-group form-group-half">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last_name" class="form-control" required>
+                </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control" required>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="form-group">
+                <label for="phone-number">Phone Number:</label>
+                <input type="tel" id="phone-number" name="phone" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" class="form-control" required>
+            </div>
+
+            <!-- Gender and Blood Group -->
+            <div class="radio-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <div class="form-group">
+                <label for="blood-group">Blood Group:</label>
+                <select id="blood-group" name="blood_group" class="select-country" required>
+                    <option value="">Select your blood group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </div>
+
+            <!-- Additional Comments and Country -->
+            <div class="form-group">
+                <label for="additional-comments">Additional Comments:</label>
+                <textarea id="additional-comments" name="comments" class="textarea"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country" class="select-country" required>
+                    <option value="">Select a country</option>
+                    <option value="India">India</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                </select>
+            </div>
+
+            <!-- Terms and Password -->
+            <div class="checkbox">
+                <input type="checkbox" id="terms-and-conditions" name="terms" class="form-control" required>
+                <label for="terms-and-conditions">I accept all terms and conditions</label>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm_password" class="form-control" required>
+            </div>
+
+            <!-- reCAPTCHA Widget -->
+            <div class="g-recaptcha" data-sitekey="6LfB614qAAAAAAtcu1EK6Q8KizyVbSahLUSaxqkZ"></div> <!-- Replace with your site key -->
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+
+        <div id="thank-you-message" class="thank-you">
+            <p>Thank You for Registering!</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("registration-form").addEventListener("submit", function(event) {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
